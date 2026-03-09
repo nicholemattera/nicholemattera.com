@@ -6,6 +6,92 @@
     <title>Nichole Mattera</title>
     <link href="/src/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="antialiased">
+    <div class="flex min-h-[100dvh] flex-col">
+      <header class="w-full bg-primary py-12 md:py-20 lg:py-28">
+        <div class="container px-4 md:px-6">
+          <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+            <div class="flex flex-col justify-center space-y-4">
+              <div class="space-y-2">
+                <h1
+                  id="title"
+                  class="text-center text-3xl font-bold tracking-tighter text-primary-foreground sm:text-5xl lg:text-left xl:text-6xl/none">
+                  Nichole Mattera
+                </h1>
+
+                <p class="text-center text-primary-foreground/80 md:text-xl lg:max-w-[600px] lg:text-left">
+                  Experienced software engineer, professional climber, and civil activist.
+                </p>
+
+                <div class="space-x-4 text-center lg:text-left">
+                  <a href="https://linkedin.com/in/nicholemattera" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
+                    LinkedIn
+                  </a>
+
+                  <a href="https://github.com/NicholeMattera" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
+                    GitHub
+                  </a>
+
+                  <a href="https://bsky.app/profile/nicholemattera.com" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
+                    Bluesky
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <img
+                src="/images/nichole.webp"
+                srcset="/images/nichole@2x.webp 2x"
+                width="400"
+                height="400"
+                aria-labelledby="title"
+                class="mx-auto aspect-square overflow-hidden rounded-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="w-full flex-1 px-4 py-12 md:px-6 md:pb-20 lg:pb-28">
+        <div class="container grid gap-8">
+          <section class="mb-3 md:mb-5 lg:mb-7">
+            <h2 class="text-3xl font-bold tracking-tighter text-foreground">About Me</h2>
+            <p class="mt-4 text-muted-foreground md:text-lg">I've been interested in and passionate about programming since I was a kid. I started tinkering on an old 486 laptop with Borland C++ modifying examples to make fake installation applications. Once I got my Sony PSP in high school, I created and released homebrew applications. With that experience, I got a job out of high school with PosiMotion.</p>
+            <p class="mt-4 text-muted-foreground md:text-lg">Today, I still have a passion for programming with plenty of side projects outside of work. I have also picked up a few more hobbies, such as rock climbing, hiking, and photography. In my free time, I also volunteer with Open Arms of Minnesota, helping to provide nourishing meals to critically ill individuals and their families.</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
+        <p class="text-xs text-muted-foreground">
+          <img src="/images/minnesota.svg" width="50px" alt="Minnesota Flag" class="inline-block rounded-xs mr-2" />
+          Proudly built in Saint Paul, Minnesota.
+        </p>
+        
+        <nav class="flex gap-4 sm:ml-auto sm:gap-6">
+          <a
+            href="https://linkedin.com/in/nicholemattera"
+            target="_blank"
+            class="text-xs underline-offset-4 hover:underline">
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/NicholeMattera"
+            target="_blank"
+            class="text-xs underline-offset-4 hover:underline">
+            GitHub
+          </a>
+
+          <a
+            href="https://bsky.app/profile/nicholemattera.com"
+            target="_blank"
+            class="text-xs underline-offset-4 hover:underline">
+            Bluesky
+          </a>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>
