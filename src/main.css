@@ -1,0 +1,58 @@
+@import "@fontsource-variable/manrope";
+@import "tailwindcss";
+
+@theme {
+    --color-background: hsl(210 100% 97%);
+    --color-foreground: hsl(339 20% 20%);
+    --color-primary: hsl(308 56% 85%);
+    --color-primary-foreground: hsl(210 22% 22%);
+    --color-secondary: hsl(196 75% 88%);
+    --color-secondary-foreground: hsl(210 22% 22%);
+    --color-accent: hsl(211 86% 70%);
+    --color-accent-foreground: hsl(210 22% 22%);
+    --color-destructive:hsl(0 93% 73%);
+    --color-destructive-foreground: hsl(210 22% 22%);
+    --color-muted: hsl(210 100% 95%);
+    --color-muted-foreground: hsl(210 22% 22%);
+    --color-card: hsl(210 100% 97%);
+    --color-card-foreground: hsl(210 22% 22%);
+    --color-popover: hsl(0 0% 100%);
+    --color-popover-foreground: hsl(341 20% 22%);
+    --color-border: hsl(210 40% 80%);
+    --color-input: hsl(210 40% 56%);
+    --color-ring: hsl(210 40% 60%);
+    --radius: 1rem;
+    --font-heading: 'Manrope Variable',ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+    --font-body: 'Manrope Variable',ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+    --radius-xs: calc(1rem - 8px);
+    --radius-sm: calc(1rem - 4px);
+    --radius-md: calc(1rem - 2px);
+    --radius-lg: 1rem;
+    --radius-xl: calc(1rem + 4px);
+    --radius-2xl: calc(1rem + 8px);
+    --radius-3xl: calc(1rem + 12px);
+    --radius-4xl: calc(1rem + 16px);
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    @apply border-border;
+}
+
+body {
+    @apply bg-background font-body text-foreground;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
