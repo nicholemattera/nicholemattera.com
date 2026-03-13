@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nichole Mattera</title>
     <link href="/src/main.css" rel="stylesheet" />
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body class="antialiased">
     <div class="flex min-h-[100dvh] flex-col">
@@ -24,26 +25,15 @@
                 </p>
 
                 <div class="space-x-4 text-center lg:text-left">
-                  <a
-                    href="https://linkedin.com/in/nicholemattera"
-                    target="_blank"
-                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
-                    LinkedIn
-                  </a>
-
-                  <a
-                    href="https://github.com/NicholeMattera"
-                    target="_blank"
-                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
-                    GitHub
-                  </a>
-
-                  <a
+                  <nm-button
+                    href="https://www.linkedin.com/in/nicholemattera"
+                    label="LinkedIn"
+                    target="_blank"></nm-button>
+                  <nm-button href="https://github.com/NicholeMattera" label="GitHub" target="_blank"></nm-button>
+                  <nm-button
                     href="https://bsky.app/profile/nicholemattera.com"
-                    target="_blank"
-                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 mt-4">
-                    Bluesky
-                  </a>
+                    label="Bluesky"
+                    target="_blank"></nm-button>
                 </div>
               </div>
             </div>
@@ -63,8 +53,7 @@
 
       <main class="w-full flex-1 px-4 py-12 md:px-6 md:pb-20 lg:pb-28">
         <div class="container grid gap-8">
-          <section class="mb-3 md:mb-5 lg:mb-7">
-            <h2 class="text-3xl font-bold tracking-tighter text-foreground">About Me</h2>
+          <nm-section title="About Me">
             <p class="mt-4 text-muted-foreground md:text-lg">
               I've been interested in and passionate about programming since I was a kid. I started tinkering on an old
               486 laptop with Borland C++ modifying examples to make fake installation applications. Once I got my Sony
@@ -77,210 +66,148 @@
               volunteer with Open Arms of Minnesota, helping to provide nourishing meals to critically ill individuals
               and their families.
             </p>
-          </section>
+          </nm-section>
 
-          <section class="mb-3 md:mb-5 lg:mb-7">
-            <h2 class="text-3xl font-bold tracking-tighter text-foreground">Experience</h2>
-            <div class="mt-4 grid items-start gap-4 lg:grid-cols-2">
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Staff Frontend Engineer, Team Lead</h3>
-                  <p class="text-sm text-muted-foreground">Nearpod / Renaissance Learning | July 2023 - Present</p>
-                </div>
+          <nm-section title="Experience" grid>
+            <nm-experience
+              title="Staff Frontend Engineer, Team Lead"
+              company="Nearpod / Renaissance Learning"
+              period="July 2023 - Present">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>Contributed to the Component Library to align with a brand new internal design system.</li>
+                <li>
+                  Implemented Conventional Commit standards across Nearpod and automated versioning and change log
+                  generation with it.
+                </li>
+                <li>Developed a tool to easily query files across over 200 repositories for auditing purposes.</li>
+                <li>Enhanced the local environment by reducing the amount RAM by over 16GB to run the full stack.</li>
+              </ul>
+            </nm-experience>
 
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>Contributed to the Component Library to align with a brand new internal design system.</li>
-                  <li>
-                    Implemented Conventional Commit standards across Nearpod and automated versioning and change log
-                    generation with it.
-                  </li>
-                  <li>Developed a tool to easily query files across over 200 repositories for auditing purposes.</li>
-                  <li>Enhanced the local environment by reducing the amount RAM by over 16GB to run the full stack.</li>
-                </ul>
-              </div>
+            <nm-experience
+              title="Inclusion Council Member"
+              company="Nearpod / Renaissance Learning"
+              period="February 2024 - Present">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>Engage in monthly meetings to discuss subcommittee progress.</li>
+                <li>
+                  Contribute to the education and development subcommittee by helping to source educational material
+                  from LinkedIn Learning.
+                </li>
+                <li>Collaborate on the creation of a virtual privilege walk for leaders.</li>
+              </ul>
+            </nm-experience>
 
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Inclusion Council Member</h3>
-                  <p class="text-sm text-muted-foreground">Nearpod / Renaissance Learning | February 2024 - Present</p>
-                </div>
+            <nm-experience title="Staff Frontend Engineer, Tech Lead" company="Pendo" period="June 2020 - June 2023">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>
+                  Contributed to developing Core Events and Product Engagement Score, including building a custom radar
+                  chart for PES in a short turnaround window.
+                </li>
+                <li>
+                  Led a team to deliver the Workflows feature for Pendo's Adopt product, providing valuable insight into
+                  business processes
+                </li>
+                <li>
+                  Temporarily served as Tech Lead for the Data Explorer team, improving processes and delivering general
+                  improvements and added functionality
+                </li>
+                <li>
+                  Contributed to the Integrations team by providing final touches on Data Sync, fixing long-standing
+                  bugs, and upgrading dependencies for the Resource Center integration repository.
+                </li>
+              </ul>
+            </nm-experience>
 
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>Engage in monthly meetings to discuss subcommittee progress.</li>
-                  <li>
-                    Contribute to the education and development subcommittee by helping to source educational material
-                    from LinkedIn Learning.
-                  </li>
-                  <li>Collaborate on the creation of a virtual privilege walk for leaders.</li>
-                </ul>
-              </div>
+            <nm-experience title="GSRM Affinity Group Co-Chair" company="Pendo" period="February 2021 - April 2022">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>Involved in planning monthly meetings and educating colleagues on important GSRM issues.</li>
+                <li>
+                  Contributed to raising awareness about significant events such as Transgender Awareness Week and
+                  Aromantic Spectrum Awareness Week.
+                </li>
+                <li>
+                  Advocated for changes in the organization for the GSRM group as part of Pendo's Diversity Advisory
+                  Board.
+                </li>
+              </ul>
+            </nm-experience>
 
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Staff Frontend Engineer, Tech Lead</h3>
-                  <p class="text-sm text-muted-foreground">Pendo | June 2020 - June 2023</p>
-                </div>
+            <nm-experience title="Software Engineer" company="Cision" period="September 2016 - June 2020">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>
+                  Contributed as a full stack engineer working in C# and Angular.js to the Analytics Dashboard, Social
+                  Analytics Tracking, and Earned/Placed Impact areas of Cision Communication Cloud.
+                </li>
+                <li>Assisted as a frontend engineer working in React to the Email Marketing are of Trendkite.</li>
+              </ul>
+            </nm-experience>
 
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>
-                    Contributed to developing Core Events and Product Engagement Score, including building a custom
-                    radar chart for PES in a short turnaround window.
-                  </li>
-                  <li>
-                    Led a team to deliver the Workflows feature for Pendo's Adopt product, providing valuable insight
-                    into business processes
-                  </li>
-                  <li>
-                    Temporarily served as Tech Lead for the Data Explorer team, improving processes and delivering
-                    general improvements and added functionality
-                  </li>
-                  <li>
-                    Contributed to the Integrations team by providing final touches on Data Sync, fixing long-standing
-                    bugs, and upgrading dependencies for the Resource Center integration repository.
-                  </li>
-                </ul>
-              </div>
+            <nm-experience title="Technical Project Lead" company="Mindtree" period="January 2014 - September 2016">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>
+                  Led mobile projects, such as Volvo Scout Master and Mack CV360 iPad apps, for their Delivery Center in
+                  Gainesville, FL.
+                </li>
+                <li>
+                  Responsible for estimations, creating build processes, meeting with clients, managing code quality,
+                  conducting technical interviews, and training junior engineers.
+                </li>
+                <li>Helped clients adapt to agile methodology</li>
+              </ul>
+            </nm-experience>
 
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">GSRM Affinity Group Co-Chair</h3>
-                  <p class="text-sm text-muted-foreground">Pendo | February 2021 - April 2022</p>
-                </div>
+            <nm-experience title="Lead Internet Engineer" company="Zgraph" period="November 2011 - January 2014">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>
+                  Lead engineer overseeing projects such as Monterey Boats iPad app and National Marker Company
+                  Ecommerce website.
+                </li>
+                <li>Responsible to maintaining and upkeep of the servers hosting all of the clients websites.</li>
+              </ul>
+            </nm-experience>
 
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>Involved in planning monthly meetings and educating colleagues on important GSRM issues.</li>
-                  <li>
-                    Contributed to raising awareness about significant events such as Transgender Awareness Week and
-                    Aromantic Spectrum Awareness Week.
-                  </li>
-                  <li>
-                    Advocated for changes in the organization for the GSRM group as part of Pendo's Diversity Advisory
-                    Board.
-                  </li>
-                </ul>
-              </div>
+            <nm-experience title="Lead Programmer" company="PosiMotion" period="June 2008 - November 2011">
+              <ul class="list-disc p-6 pl-12 pt-0">
+                <li>
+                  Lead engineer overseeing projects such as National Geographic's Jigsaw and Spot It games, and the 2009
+                  Toys R Us Big Book app.
+                </li>
+                <li>Designed and led the project for G-Park, featured in an Apple iPhone 3G commercial.</li>
+                <li>
+                  Acted as a mentor to other engineers, providing support and guidance, and collaborated with
+                  individuals and companies for application publishing.
+                </li>
+              </ul>
+            </nm-experience>
+          </nm-section>
 
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Software Engineer</h3>
-                  <p class="text-sm text-muted-foreground">Cision | September 2016 - June 2020</p>
-                </div>
+          <nm-section title="Education" grid>
+            <nm-education
+              name="AS, Computer Programming and Analysis"
+              organization="Daytona State College"
+              year="2013"></nm-education>
+            <nm-education
+              name="Certificate, Computer Programming"
+              organization="Daytona State College"
+              year="2013"></nm-education>
+          </nm-section>
 
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>
-                    Contributed as a full stack engineer working in C# and Angular.js to the Analytics Dashboard, Social
-                    Analytics Tracking, and Earned/Placed Impact areas of Cision Communication Cloud.
-                  </li>
-                  <li>Assisted as a frontend engineer working in React to the Email Marketing are of Trendkite.</li>
-                </ul>
-              </div>
+          <nm-section title="Certifications" grid>
+            <nm-certification name="Pendo Essentials" period="July 2020">
+              <p class="px-6">
+                This certifies that I can install Pendo, tag features, and pages, create and use segments, implement
+                guides and layouts, and interpret behavioral analytics.
+              </p>
+            </nm-certification>
 
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Technical Project Lead</h3>
-                  <p class="text-sm text-muted-foreground">Mindtree | January 2014 - September 2016</p>
-                </div>
-
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>
-                    Led mobile projects, such as Volvo Scout Master and Mack CV360 iPad apps, for their Delivery Center
-                    in Gainesville, FL.
-                  </li>
-                  <li>
-                    Responsible for estimations, creating build processes, meeting with clients, managing code quality,
-                    conducting technical interviews, and training junior engineers.
-                  </li>
-                  <li>Helped clients adapt to agile methodology</li>
-                </ul>
-              </div>
-
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Lead Internet Engineer</h3>
-                  <p class="text-sm text-muted-foreground">Zgraph | November 2011 - January 2014</p>
-                </div>
-
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>
-                    Lead engineer overseeing projects such as Monterey Boats iPad app and National Marker Company
-                    Ecommerce website.
-                  </li>
-                  <li>Responsible to maintaining and upkeep of the servers hosting all of the clients websites.</li>
-                </ul>
-              </div>
-
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Lead Programmer</h3>
-                  <p class="text-sm text-muted-foreground">PosiMotion | June 2008 - November 2011</p>
-                </div>
-
-                <ul class="list-disc p-6 pl-12 pt-0">
-                  <li>
-                    Lead engineer overseeing projects such as National Geographic's Jigsaw and Spot It games, and the
-                    2009 Toys R Us Big Book app.
-                  </li>
-                  <li>Designed and led the project for G-Park, featured in an Apple iPhone 3G commercial.</li>
-                  <li>
-                    Acted as a mentor to other engineers, providing support and guidance, and collaborated with
-                    individuals and companies for application publishing.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="mb-3 md:mb-5 lg:mb-7">
-            <h2 class="text-3xl font-bold tracking-tighter text-foreground">Education</h2>
-            <div class="mt-4 grid items-start gap-4 lg:grid-cols-2">
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">AS, Computer Programming and Analysis</h3>
-                  <p class="text-sm text-muted-foreground">Daytona State College | 2013</p>
-                </div>
-              </div>
-
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Certificate, Computer Programming</h3>
-                  <p class="text-sm text-muted-foreground">Daytona State College | 2013</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="mb-3 md:mb-5 lg:mb-7">
-            <h2 class="text-3xl font-bold tracking-tighter text-foreground">Certifications</h2>
-            <div class="mt-4 grid items-start gap-4 lg:grid-cols-2">
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Pendo Essentials</h3>
-                  <p class="text-sm text-muted-foreground">July 2020</p>
-                </div>
-
-                <p class="p-6 pt-0">
-                  This certifies that I can install Pendo, tag features, and pages, create and use segments, implement
-                  guides and layouts, and interpret behavioral analytics.
-                </p>
-              </div>
-
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">
-                    Orchestra Commerce Platform Technical Training
-                  </h3>
-                  <p class="text-sm text-muted-foreground">July 2015</p>
-                </div>
-              </div>
-
-              <div class="rounded-xl border bg-card text-card-foreground shadow mt-4">
-                <div class="flex flex-col space-y-1.5 p-6">
-                  <h3 class="font-semibold leading-none tracking-tight">Scaled Agile Framework® Practitioner (SP)</h3>
-                  <p class="text-sm text-muted-foreground">October 2015 - October 2016</p>
-                </div>
-              </div>
-            </div>
-          </section>
+            <nm-certification
+              name="Orchestra Commerce Platform Technical Training"
+              period="July 2015"></nm-certification>
+            <nm-certification
+              name="Scaled Agile Framework® Practitioner (SP)"
+              period="October 2015 - October 2016"></nm-certification>
+          </nm-section>
         </div>
       </main>
 

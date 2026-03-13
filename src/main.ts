@@ -1,0 +1,5 @@
+import './components/Button'
+import './components/Certification'
+import './components/Education'
+import './components/Experience'
+import './components/Section'
