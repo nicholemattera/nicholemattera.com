@@ -22,7 +22,7 @@
   "dependencies": {
     "@fontsource-variable/manrope": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
